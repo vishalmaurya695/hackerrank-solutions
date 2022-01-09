@@ -1,0 +1,42 @@
+// a c++ program to calculate the difference between two diagonals of a square matrix
+#include<iostream>
+using namespace std;
+int main(){
+  int n=0;
+  cin>>n;
+  int arr[n][n];
+  int sum1=0;
+  int sum2=0;
+  int result=0;
+
+  for (int i=0;i<n;i++){
+    for(int j=0;j<n;j++){
+      cin>>arr[i][j];
+    }
+
+  }
+  // diagonal difference
+  for(int i=0;i<n;i+=3){
+    for (int j=0;j<n;j+=3){
+      sum1= sum1+arr[i][j];
+    }
+  }
+  // diagonal difference
+  for(int i=n;i<0;i-=3){
+    for (int j=n;j<0;j-=3){
+      sum2= sum2+arr[i][j];
+    }
+  }
+  result = sum1-sum2;
+  cout<<"result"<<endl;
+  cout<<result<<endl;
+  // print 2d array
+  cout<<"array"<<endl;
+  for (int i=0;i<n;i++){
+    for(int j=0;j<n;j++){
+      cout<<arr[i][j]<<" ";
+    }cout<<endl;
+
+  }
+
+} 
